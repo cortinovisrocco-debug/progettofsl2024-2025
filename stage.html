@@ -1,0 +1,274 @@
+<!DOCTYPE html><html class="dark" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #031427;
+            color: #d3e4fe;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+        .glass-card {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.03);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#1a1c1c",
+                      "tertiary-container": "#636e83",
+                      "outline": "#8d90a0",
+                      "surface-container-lowest": "#000f21",
+                      "on-secondary-container": "#b4b5b5",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "surface-container-low": "#0b1c30",
+                      "surface-variant": "#26364a",
+                      "secondary": "#c6c6c7",
+                      "on-primary-container": "#eeefff",
+                      "surface-container-high": "#1b2b3f",
+                      "surface-bright": "#2a3a4f",
+                      "primary-container": "#2563eb",
+                      "on-surface": "#d3e4fe",
+                      "surface-tint": "#b4c5ff",
+                      "tertiary-fixed-dim": "#bcc7de",
+                      "tertiary-fixed": "#d8e3fb",
+                      "surface-dim": "#031427",
+                      "on-primary": "#002a78",
+                      "primary-fixed": "#dbe1ff",
+                      "on-tertiary": "#263143",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "surface-container": "#102034",
+                      "on-tertiary-fixed-variant": "#3c475a",
+                      "surface-container-highest": "#26364a",
+                      "error": "#ffb4ab",
+                      "primary": "#b4c5ff",
+                      "on-secondary": "#2f3131",
+                      "background": "#031427",
+                      "inverse-surface": "#d3e4fe",
+                      "secondary-container": "#454747",
+                      "surface": "#031427",
+                      "tertiary": "#bcc7de",
+                      "on-surface-variant": "#c3c6d7",
+                      "on-background": "#d3e4fe",
+                      "on-tertiary-fixed": "#111c2d",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "inverse-primary": "#0053db",
+                      "on-tertiary-container": "#ecf1ff",
+                      "on-primary-fixed": "#00174b",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "inverse-on-surface": "#213145",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#454747",
+                      "outline-variant": "#434655"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "48px",
+                      "container-max": "1280px",
+                      "gutter": "32px",
+                      "margin": "64px",
+                      "unit": "8px",
+                      "stack-sm": "24px",
+                      "stack-lg": "80px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "display-xl": ["Noto Serif"],
+                      "headline-md": ["Noto Serif"],
+                      "body-md": ["Inter"],
+                      "headline-sm": ["Noto Serif"],
+                      "label-caps": ["Inter"],
+                      "display-lg": ["Noto Serif"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background text-primary dark:text-primary w-full top-0 left-0 sticky z-[60] border-b border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin py-stack-sm flex justify-between items-center px-4">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-headline-sm" data-icon="menu">menu</span>
+<span class="font-display-lg text-display-lg text-primary dark:text-primary tracking-tighter text-2xl">PORTFOLIO</span>
+</div>
+<div class="hidden md:flex gap-8">
+<span class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-150 cursor-pointer">HOME</span>
+<span class="font-label-caps text-label-caps text-primary border-b border-primary cursor-pointer">LAVORI</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-150 cursor-pointer">DIARIO</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-150 cursor-pointer">STACK</span>
+</div>
+<div class="cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-headline-sm" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<main class="relative min-h-screen">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto py-stack-lg px-4 md:px-margin">
+<div class="flex flex-col md:flex-row items-end justify-between border-b border-outline-variant/30 pb-stack-sm mb-stack-md">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">OTTOBRE 2023 — CASE STUDY TIROCINIO</span>
+<h1 class="font-display-xl mb-4 text-4xl md:text-display-xl">Aeroporto Orio al Serio</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Un'immersione profonda negli ingranaggi operativi dell'aeroporto internazionale BGY. Due settimane dedicate all'analisi dei flussi logistici e della comunicazione multilingue in un centro nevralgico del transito globale.
+                    </p>
+</div>
+<div class="hidden md:block text-right">
+<div class="font-label-caps text-label-caps text-secondary">DURATA</div>
+<div class="font-headline-sm text-headline-sm">14 GIORNI</div>
+</div>
+</div>
+<!-- Main Editorial Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-sm md:gap-gutter">
+<!-- Left Column: Narrative & Visual -->
+<div class="md:col-span-7 space-y-stack-md">
+<div class="aspect-[16/10] overflow-hidden border border-outline-variant/20">
+<img alt="Terminal aeroportuale" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Una fotografia grandangolare e cinematografica degli interni moderni del terminal dell'aeroporto di Orio al Serio al tramonto. Luci d'atmosfera blu freddo pervadono lo spazio, riflettendosi sui pavimenti in marmo lucido e sulle ampie vetrate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNY-XUzLpgx4HsiOVuRuxHwV9mlyaV_h6dBGaPZHE8gTn1_sel4TLUccXHxhrsNbTTc1XA4tZ8LZVdmqZt5xSQ572tritpF7jI5VLQoJIK2Jpb_24_a4XhQ0Y9BbR3s2qLXG5rvmHBgtJMF4vgCFM67GKudQ2CogzFtmQYOGkysKatkeWQHG6Xd5Upf4oprSFW1cKmTC19ZhsMp-8Ra6En-GRh-0rGQJKbAVnoA6_CaD50IhmkqZ2br8HvXulucLKBXNd1E77UpiAx">
+</div>
+<div class="space-y-stack-sm">
+<h2 class="font-headline-md text-headline-md text-primary">L'Esperienza Centrale</h2>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-4">
+<p class="">Il mio incarico presso l'hub di Orio al Serio si è concentrato sull'intersezione tra logistica tecnica ed esperienza dei passeggeri. Operando tra i settori amministrativi e quelli a contatto con il pubblico, ho osservato il delicato equilibrio tra programmazione dei voli, servizi a terra e protocolli di sicurezza.</p>
+<p class="">Il tirocinio è servito come applicazione pratica degli obiettivi PCTO, richiedendo elevati livelli di adattabilità e precisione in un ambiente ad alta pressione dove ogni minuto scandisce il flusso di migliaia di viaggiatori.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Technical Highlights -->
+<div class="md:col-span-5 space-y-stack-md">
+<!-- Highlight Card: Organization -->
+<div class="glass-card border border-outline-variant/20 space-y-4 group hover:border-primary/50 transition-colors p-6 md:p-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_tree">account_tree</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wider">Organizzazione</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Padronanza di complessi sistemi di schedulazione e protocolli di allocazione delle risorse. Supporto nell'ottimizzazione dell'assegnazione dei gate e gestione dei flussi del terminal durante i picchi di arrivo.
+                        </p>
+</div>
+<!-- Highlight Card: Relations -->
+<div class="glass-card border border-outline-variant/20 space-y-4 group hover:border-primary/50 transition-colors p-6 md:p-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="groups">groups</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wider">Relazioni</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Gestione delle dinamiche interpersonali professionali all'interno del team operativo e con gli stakeholder esterni. Sviluppo di capacità di risoluzione dei conflitti in scenari critici di customer service.
+                        </p>
+</div>
+<!-- Highlight Card: Language -->
+<div class="glass-card border border-outline-variant/20 space-y-4 group hover:border-primary/50 transition-colors p-6 md:p-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="translate">translate</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wider">Lingua</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Utilizzo della competenza multilingue (Inglese, Italiano) per assistere i passeggeri internazionali e coordinarsi con i partner logistici transfrontalieri, garantendo una comunicazione tecnica chiara.
+                        </p>
+</div>
+<!-- Quote/Stat Section -->
+<div class="pt-stack-sm border-t border-outline-variant/20">
+<blockquote class="font-headline-sm italic text-secondary leading-snug text-xl md:text-headline-sm">
+                            "L'aeroporto è un organismo vivente dove ogni dettaglio tecnico sostiene un viaggio umano."
+                        </blockquote>
+<div class="mt-4 flex gap-2">
+<span class="font-label-caps text-[10px] border border-outline px-2 py-1 uppercase">Logistica</span>
+<span class="font-label-caps text-[10px] border border-outline px-2 py-1 uppercase">Aviazione</span>
+<span class="font-label-caps text-[10px] border border-outline px-2 py-1 uppercase">Comunicazione</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="max-w-container-max mx-auto py-stack-lg border-t border-outline-variant/10 px-4 md:px-margin">
+<h2 class="font-label-caps text-label-caps text-primary mb-stack-sm uppercase">Documentazione sul campo</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square bg-surface-container-high border border-outline-variant/10 overflow-hidden">
+<img alt="Torre di controllo" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Torre di controllo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyQrSszzEYIIcZwwCIP7K_xPuJYLB-YD9Jt1v1AicY1kmC2Fvk-9vnJc8lmnYoQMvhUcUrBh7Nn8KA9X-svUVji78vVaHVPMJi8B5Gn97q_6pKXJL83pzPRlxkacgYzvLdL78tJ9WJm-QiYl7slWy2eaMqoyQbL4_HSTlVIM0KkI_qhLWRWuMVP66JSrUBWBC5YU91iwK9tlhC0iX4nnZB8Yyz9jkiy0snx_984GfkYURzdypjLw8CTnQQb46wPZrXUANMOTJyQUeR">
+</div>
+<div class="aspect-square bg-surface-container-high border border-outline-variant/10 overflow-hidden">
+<img alt="Quadro logistico" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Quadro logistico" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD09UVdQJjR4ID51rmNUu6oWKPWnKb8UOCCYMuw6IEbUy6upbCLB391LasqSuJ1RqAs2NI9IvGTFB0vJ4x2P195jPz_jcgSJC5Xc6Cufpy5cSYsE5hwJ-TR1l-_GHoRWogVlSlcr9bEuovYdLT6lirQSlXez9oC440QG-gQHLmrtQjohhuVTx2liQqSYYsMxV7WsCLT2qVyFAB3ogNFyxCtjA8HVBUY-yCF3-j6PUyZnLD2fVSwo6PnUvzxCQC6C8_xSVZLTS9o52bV">
+</div>
+<div class="aspect-square bg-surface-container-high border border-outline-variant/10 overflow-hidden">
+<img alt="Personale di terra" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Personale di terra" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeSrEBMuM6O4MXkb2AxrgLB2H9I6NAqZAJ_5AoI9wNB3O12mZkmM6lmugafepbboWBX-vc9M7m5wfMg81ONLawl8ipFsRnyVuYhiLKElVPKn5mbMp3zmvfh7TW1BunLz7Zkke5zRvt2HSRlStzACQTPcEm4pwojcNH_yPJU6nCVxuLwti3fVhszbdHwKvdwUiID-_hLdmbZ4jQDHXpgOpt85vgXah6oVXT5uC24u-1A2f5U3Y8y-qw16r_uukUmDu3__tdA8mFCbJz">
+</div>
+<div class="aspect-square bg-surface-container-high border border-outline-variant/10 overflow-hidden">
+<img alt="Lounge del terminal" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Lounge del terminal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5wf5U3gdNEcBZ677FDzkdWolcLBKCFNLQtFmn4590T03JcU284Qm3LmXJux58xJyP5n7YbVNNDBBfw90zWPb7o3Pxr2yl8hpb8248O0ZCwEwYJOwGBMv7uCfIn9hSG0YpMK9Jzly3c3wj3t1Njcockabgz6pJp-B_r-D9fXPvNVgpzPwWBqhIcnVWpnUYSdeQPNN-H5zE0RgiQ7T284xeZqxRTYLKYoNwtici1vBuavRXVLgCsaTiQBoxlv2AlgqAZXLP5302B86x">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background text-secondary dark:text-secondary w-full relative border-t border-outline-variant/10 opacity-60">
+<div class="max-w-container-max mx-auto py-stack-lg flex flex-col md:flex-row justify-between items-center px-4 md:px-margin">
+<span class="font-label-caps text-label-caps text-on-surface mb-4 md:mb-0">© 2024 Midnight Editorial Portfolio. Tutti i diritti riservati.</span>
+<div class="flex gap-8">
+<span class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Contatti</span>
+<span class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Resume</span>
+<span class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Sorgente</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary fixed bottom-0 w-full z-50 border-t border-outline-variant/30 md:hidden">
+<div class="flex justify-around items-center w-full px-4 pb-4 pt-2">
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-on-surface transition-all active:scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2 active:scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="font-label-caps text-label-caps mt-1">Lavori</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-on-surface transition-all active:scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-label-caps text-label-caps mt-1">Diario</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-on-surface transition-all active:scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="font-label-caps text-label-caps mt-1">Stack</span>
+</div>
+</div>
+</nav>
+<!-- Spacing for BottomNav on mobile -->
+
+
+
+</body></html>

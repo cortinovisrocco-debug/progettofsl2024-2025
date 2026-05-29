@@ -1,0 +1,284 @@
+<!DOCTYPE html><html class="dark" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #031427;
+            color: #d3e4fe;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+        .glass-card {
+            background: rgba(38, 54, 74, 0.2);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#1a1c1c",
+                      "tertiary-container": "#636e83",
+                      "outline": "#8d90a0",
+                      "surface-container-lowest": "#000f21",
+                      "on-secondary-container": "#b4b5b5",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "surface-container-low": "#0b1c30",
+                      "surface-variant": "#26364a",
+                      "secondary": "#c6c6c7",
+                      "on-primary-container": "#eeefff",
+                      "surface-container-high": "#1b2b3f",
+                      "surface-bright": "#2a3a4f",
+                      "primary-container": "#2563eb",
+                      "on-surface": "#d3e4fe",
+                      "surface-tint": "#b4c5ff",
+                      "tertiary-fixed-dim": "#bcc7de",
+                      "tertiary-fixed": "#d8e3fb",
+                      "surface-dim": "#031427",
+                      "on-primary": "#002a78",
+                      "primary-fixed": "#dbe1ff",
+                      "on-tertiary": "#263143",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "surface-container": "#102034",
+                      "on-tertiary-fixed-variant": "#3c475a",
+                      "surface-container-highest": "#26364a",
+                      "error": "#ffb4ab",
+                      "primary": "#b4c5ff",
+                      "on-secondary": "#2f3131",
+                      "background": "#031427",
+                      "inverse-surface": "#d3e4fe",
+                      "secondary-container": "#454747",
+                      "surface": "#031427",
+                      "tertiary": "#bcc7de",
+                      "on-surface-variant": "#c3c6d7",
+                      "on-background": "#d3e4fe",
+                      "on-tertiary-fixed": "#111c2d",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "inverse-primary": "#0053db",
+                      "on-tertiary-container": "#ecf1ff",
+                      "on-primary-fixed": "#00174b",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "inverse-on-surface": "#213145",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#454747",
+                      "outline-variant": "#434655"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "48px",
+                      "container-max": "1280px",
+                      "gutter": "32px",
+                      "margin": "64px",
+                      "unit": "8px",
+                      "stack-sm": "24px",
+                      "stack-lg": "80px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "display-xl": ["Noto Serif"],
+                      "headline-md": ["Noto Serif"],
+                      "body-md": ["Inter"],
+                      "headline-sm": ["Noto Serif"],
+                      "label-caps": ["Inter"],
+                      "display-lg": ["Noto Serif"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface bg-background" style="opacity: 1; transition: opacity 1s ease-in-out; background-position: 0.153846px 6.50625px;">
+<!-- TopAppBar -->
+<header class="w-full top-0 left-0 sticky bg-background z-50 border-b border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin py-stack-sm flex justify-between items-center">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80">menu</span>
+<h1 class="font-display-lg text-headline-sm text-primary tracking-tighter uppercase">PORTFOLIO</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="font-label-caps text-label-caps text-primary border-b border-primary hover:bg-on-surface/5 transition-colors duration-150 py-1" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:bg-on-surface/5 transition-colors duration-150 py-1" href="#">Stage</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:bg-on-surface/5 transition-colors duration-150 py-1" href="#">Diario</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:bg-on-surface/5 transition-colors duration-150 py-1" href="#">Stack</a>
+</nav>
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80">account_circle</span>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin">
+<!-- Hero Section -->
+<section class="py-stack-lg min-h-[80vh] flex flex-col justify-center">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 lg:col-span-8 order-2 md:order-1">
+<p class="font-label-caps text-label-caps text-primary mb-4 tracking-[0.2em] uppercase">Rocco Cortinovis — PCTO 2024</p>
+<h2 class="font-display-xl md:text-display-xl text-on-surface mb-8 max-w-4xl leading-tight text-[40px]">
+                        Esperienza Professionale PCTO
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                        Un viaggio attraverso l'innovazione e la logistica aeroportuale. Esplora le competenze acquisite e i progetti sviluppati durante il mio percorso di alternanza scuola-lavoro.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-label-caps text-label-caps tracking-widest hover:bg-primary transition-all active:scale-95">
+                            INIZIA L'ESPLORAZIONE
+                        </button>
+<button class="border border-outline-variant/50 text-on-surface px-8 py-4 font-label-caps text-label-caps tracking-widest hover:border-primary transition-all active:scale-95">
+                            VEDI IL CURRICULUM
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 lg:col-span-4 order-1 md:order-2 mb-12 md:mb-0 relative">
+<div class="aspect-[1.33] w-full overflow-hidden border border-outline-variant/20 relative group">
+<img alt="Hub logistico aeroportuale" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXGIZqliXXO4X88gOeMXy_OWfHrTTeaaFjpnwJ-mZEksykbaXP8iqHOvu5N0VjHJj91ZKxOE_iX9x23gwKhRbOVr6O-NVWj5xUYyBne4crRzW1mxQMulXNvKDuGOCCzBK-AoiUPbqgZxTA1Ox89-OTYSKsHcX9TcnSKfcKkFIJ-DKC57cm9jZjrUhea2fy7YUcxVXqshRDf_2Mbv5j4aDEf6jymBKCPCS58fnNMScplhn7DfGmbYW8JKs5MluYngTamETgH2xpadAQ">
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+<!-- Decorative Frame -->
+<div class="absolute -bottom-4 -left-4 w-24 h-24 border-l border-b border-primary/40 -z-10"></div>
+<div class="absolute -top-4 -right-4 w-24 h-24 border-t border-r border-primary/40 -z-10"></div>
+</div>
+<div class="mt-4 flex justify-end">
+<span class="font-label-caps text-[10px] text-outline tracking-tighter opacity-50">IMG_007 // LOGISTICA_AEROPORTUALE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Insights -->
+<section class="py-stack-lg border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 glass-card p-10 flex flex-col justify-between group cursor-pointer overflow-hidden relative">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">flight_takeoff</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Operazioni &amp; Gestione</h3>
+<p class="font-body-md text-on-surface-variant max-w-xs">Analisi dei flussi operativi e ottimizzazione della logistica integrata in ambienti ad alta intensità.</p>
+</div>
+<div class="mt-12 flex items-center gap-2 text-primary font-label-caps text-label-caps tracking-widest group-hover:gap-4 transition-all">
+                        ESPLORA IL CASO STUDIO <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+<div class="absolute bottom-[-10%] right-[-5%] opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[180px]">architecture</span>
+</div>
+</div>
+<!-- Secondary Square -->
+<div class="glass-card p-8 flex flex-col items-center text-center justify-center border-outline-variant/30">
+<h4 class="font-display-lg text-primary text-4xl mb-2">30+</h4>
+<p class="font-label-caps text-label-caps tracking-tighter opacity-60">ORE DI PCTO</p>
+</div>
+<!-- Tech Stack Small -->
+<div class="glass-card p-8 flex flex-col justify-between">
+<h4 class="font-label-caps text-label-caps mb-4 opacity-60">STACK PRINCIPALE</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 border border-outline-variant/40 text-[10px] font-label-caps uppercase">Logistica</span>
+<span class="px-2 py-1 border border-outline-variant/40 text-[10px] font-label-caps uppercase">Analisi</span>
+<span class="px-2 py-1 border border-outline-variant/40 text-[10px] font-label-caps uppercase">Excel</span>
+</div>
+</div>
+<!-- Long Feature -->
+<div class="md:col-span-2 glass-card p-8 flex items-center gap-8 group cursor-pointer">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[20px] mb-1">Voce del Diario</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Riflessioni settimanali sull'impatto della trasformazione digitale.</p>
+</div>
+<div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">trending_flat</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full relative border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin py-stack-lg flex flex-col md:flex-row justify-between items-center opacity-60">
+<div class="mb-6 md:mb-0">
+<p class="font-label-caps text-label-caps text-on-surface">ROCCO CORTINOVIS</p>
+<p class="font-body-md text-body-md text-secondary mt-1">© 2024 Portfolio Editoriale Midnight. Tutti i diritti riservati.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contatti</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Curriculum</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sorgente</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex justify-around items-center w-full px-4 pb-4 pt-2">
+<div class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2 active:scale-95 duration-100">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-on-surface transition-all active:scale-95 duration-100">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-label-caps text-label-caps mt-1">Stage</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-on-surface transition-all active:scale-95 duration-100">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-caps text-label-caps mt-1">Diario</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-on-surface transition-all active:scale-95 duration-100">
+<span class="material-symbols-outlined">layers</span>
+<span class="font-label-caps text-label-caps mt-1">Stack</span>
+</div>
+</div>
+</nav>
+<!-- Visual Atmosphere Script -->
+<script>
+        // Subtle parallax and glow following mouse
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            // Just a tiny background shift for high-end feel
+            document.body.style.backgroundPosition = `${x * 10}px ${y * 10}px`;
+        });
+
+        // Entrance animation
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 1s ease-in-out';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 50);
+        });
+    </script>
+
+
+</body></html>
